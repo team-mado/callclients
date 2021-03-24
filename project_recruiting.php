@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="twitter:card" content="summary_large_image" >
     <meta name="twitter:site" content="https://royal-goto-8707.lolipop.io/">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" >
-    <meta name="twitter:title" content="デザインアップ！エスディージーズ" >
-    <meta name="twitter:description" content="SDGsの取り組みをSNSから広く告知！プロジェクトを担当するデザイナーをSNSで拡散募集できるSDGsプロジェクト広報支援サービス" >
+    <meta name="twitter:image" content="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:海洋ゴミを洋服に変える%0AFASHIONxSEAプロジェクト%0A%0Aデザイナー募集%0AUI | DTP | Package | Fashion%0A海のゴミから布を作り、洋服へ。魔法のようなプロジェクトを創り出すデザイン集団、求ム!,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" >
+    <meta name="twitter:title" content="デザイナー募集" >
+    <meta name="twitter:description" content="海のゴミから布を作り、洋服へ。魔法のようなプロジェクトを創り出すデザイン集団、求ム!" >
     <link rel="stylesheet" href="css/project_recruiting.css">
     <title>Document</title>
 </head>
