@@ -40,9 +40,6 @@
       </div>
       <br />
 
-
-
-
 <div class="button-box">
 <a href="login.php"><input type="submit" value="ログイン" class="simple_square_btn1"></input></a>
         <br />

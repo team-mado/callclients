@@ -64,6 +64,7 @@
           <br>
 
           <div class="center">
+            <a href="">削除する</a>
       <a href="ogp_check.php"><button class="simple_square_btn1">
         <input type="submit" value="" />送信する</a></input>
       </button>

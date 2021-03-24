@@ -1,8 +1,5 @@
 <?php
 
-// var_dump($_POST);
-// exit;
-
 if (
     !isset($_POST['company_name']) || $_POST['company_name'] == '' ||
     !isset($_POST['staff']) || $_POST['staff'] == '' ||
@@ -25,17 +22,6 @@ $businesscontent = $_POST['businesscontent'];
 $field = $_POST['field'];
 $capital = $_POST['capital'];
 $number_of_employees = $_POST['number_of_employees'];
-
-// var_dump($company_name);
-// var_dump($staff);
-// var_dump($email);
-// var_dump($password);
-// var_dump($location);
-// var_dump($businesscontent);
-// var_dump($field);
-// var_dump($capital);
-// var_dump($number_of_employees);
-// exit;
 
 
 
