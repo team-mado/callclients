@@ -57,6 +57,7 @@ if (!empty($_POST)) {
         <p>Email:</p><input type="text" name="email" value="" required>
         <p>password:</p><input type="password" name="password" value="" required>
         <p><input type="submit" value="ログイン" id=""></p>
+        <a href="registration.php">新規会員登録はこちら</a>
     </form>
 </body>
 
