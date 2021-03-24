@@ -1,3 +1,15 @@
+<?php
+
+
+
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -32,10 +44,9 @@
 
 
 <div class="button-box">
-        <input type="submit" value="ログイン" class="simple_square_btn1"></input>
+<a href="login.php"><input type="submit" value="ログイン" class="simple_square_btn1"></input></a>
         <br />
-        <a href="shinki.php"
-          ><button class="simple_square_btn1">新規登録</button></a
+        <a href="registration.php"><button class="simple_square_btn1">新規登録</button></a
         ><br /><br />
         <p class="pw-text">PWをお忘れの方は<a href="">こちら</a>から</p>
         <br />

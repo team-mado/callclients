@@ -18,7 +18,7 @@
     />
     <!-- オリジナルcomponent.CSS -->
     <link rel="stylesheet" href="css/component.css" />
-    <link rel="stylesheet" href="css/ogp-send.css" />
+    <link rel="stylesheet" href="css/project.css" />
   </head>
   <body>
     <header>
@@ -27,21 +27,22 @@
       </div>
     </header>
     <main>
-      <div class="ogp-box">
-<img class="ogp-img" src="img/ogp-y.png" alt="">
+<p><span>m_maru</span>  様ありがとうございます。<br>
+現在進行中のプロジェクトは<span class="project-kensu">2</span> 件です。</p>
+
+      <div class="ogp-ichiran-img">
+<img class="ogp-img" src="img/ogp-mini.png" alt="">
       </div>
-<hr color="#C4C4C4" width="100%" size="1">
+<!-- <hr color="#C4C4C4" width="100%" size="1"> -->
 <br>
-<p>この内容でよろしければOGP画像を作成し<br>
-  このままツイッターへ移動します</p>
+
   <br>
 <div class="button-box">
-<img src="img/bt-hensyu.png" alt=""><input type="submit" value="" /><a href="ogp-edit.php"></a>
-<a href="tweet.php"><img src="img/bt-tweet.png" alt=""></a><input type="submit" value="" /></input>
+<!-- <a href="ogp-edit.php"><img src="img/bt-hensyu.png" alt=""></a><input type="submit" value="" /><a href="ogp-edit.php"></a>
+<a href="tweet.php"><img src="img/bt-tweet.png" alt=""></a><input type="submit" value="" /><a href="tweet.php"></a></input> -->
+新規作成
 <br>
-          <div class="center">
-<a href="ogp-ichiran.php"><img src="img/bt-ichiranhe.png" alt=""></a><input type="submit" value="" /></input>
-      </div>
+
       </div>
       <br>
 <br>

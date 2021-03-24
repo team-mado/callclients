@@ -17,63 +17,63 @@
     />
     <!-- オリジナルcomponent.CSS -->
     <link rel="stylesheet" href="css/component.css" />
-    <link rel="stylesheet" href="css/shinki.css" />
+    <link rel="stylesheet" href="css/registration.css" />
   </head>
   <body>
     <main>
       <button class="simple_square_btn1" id="title-bt">新規登録</button>
 <div class="form-box">
 
-      <form action="" method="post" class="row">
+      <form action="registration_add.php" method="post" class="row">
         <label for="company">社名</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="company_name" />
       
       <br />
       
         <label for="GET-name">E-mail</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="email" />
       
       <br />
 
             
         <label for="GET-name">パスワード</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="password" />
       
       <br />
 
             
         <label for="GET-name">担当名</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="staff" />
       
       <br />
       
         <label for="GET-name">所在地</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="location" />
       
       <br />
       
         <label for="GET-name">事業内容</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="businesscontent" />
       
       <br />
       
         <label for="GET-name">分野</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="field" />
       
       <br />
       
         <label for="GET-name">資本金</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="capital" />
       
       <br />
       
         <label for="GET-name">社員数</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="number_of_employees" />
   </div>    
       <br>
       <div class="center">
       <button class="simple_square_btn1">
-        <input type="submit" value="" /><a href="ogp-new.php">送信する</a></input>
+        <input type="submit" value="" /><a href="registration_add.php">送信する</a></input>
       </button>
       </div>
 </input>
