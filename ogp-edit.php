@@ -66,7 +66,7 @@
 
           <div class="center">
       <button class="simple_square_btn1">
-        <input type="submit" value="" /><a href="ogp-new.html">送信する</a></input>
+        <input type="submit" value="" /><a href="ogp-new.php">送信する</a></input>
       </button>
       </div>
       <br>

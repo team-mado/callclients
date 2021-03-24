@@ -34,7 +34,7 @@
 <div class="button-box">
         <input type="submit" value="ログイン" class="simple_square_btn1"></input>
         <br />
-        <a href="shinki.html"
+        <a href="shinki.php"
           ><button class="simple_square_btn1">新規登録</button></a
         ><br /><br />
         <p class="pw-text">PWをお忘れの方は<a href="">こちら</a>から</p>

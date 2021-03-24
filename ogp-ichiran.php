@@ -38,8 +38,8 @@
 
   <br>
 <div class="button-box">
-<a href="ogp-edit.html"><img src="img/bt-hensyu.png" alt=""></a><input type="submit" value="" /><a href="ogp-edit.html"></a>
-<a href="tweet.html"><img src="img/bt-tweet.png" alt=""></a><input type="submit" value="" /><a href="tweet.html"></a></input>
+<a href="ogp-edit.php"><img src="img/bt-hensyu.png" alt=""></a><input type="submit" value="" /><a href="ogp-edit.php"></a>
+<a href="tweet.php"><img src="img/bt-tweet.png" alt=""></a><input type="submit" value="" /><a href="tweet.php"></a></input>
 <br>
 
       </div>

@@ -23,7 +23,7 @@
   <body>
     <header>
       <div class="header">
-        <div><a href="index.html"><img class="home-logo" src="img/home-logo.png" alt="" /></a></div>
+        <div><a href="index.php"><img class="home-logo" src="img/home-logo.png" alt="" /></a></div>
       </div>
     </header>
     <main>
@@ -65,7 +65,7 @@
           <br>
 
           <div class="center">
-      <a href="ogp-ichiran.html"><button class="simple_square_btn1">
+      <a href="ogp-ichiran.php"><button class="simple_square_btn1">
         <input type="submit" value="" />送信する</a></input>
       </button>
       </div>
