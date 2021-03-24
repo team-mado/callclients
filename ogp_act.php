@@ -3,8 +3,8 @@ session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 include('functions.php');
 
-var_dump($_POST);
-exit;
+// var_dump($_POST);
+// exit;
 
 $clients_id = $_SESSION["id"];
 $img = $_POST["img"];

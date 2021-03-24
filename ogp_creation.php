@@ -1,3 +1,14 @@
+<?php
+session_start();
+error_reporting(E_ALL & ~E_NOTICE);
+include('functions.php');
+
+$clients_id = $_SESSION["id"];
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -28,9 +39,10 @@
     </header>
     <main>
       <div class="gray-box">
-        <p>
+      <img class="ogp-img" src="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" alt="">
+        <!-- <p>
           下記のフォームを全て入力いただくと<br />
-          こちらの枠内に自動でバナーが生成されます
+          こちらの枠内に自動でバナーが生成されます -->
         </p>
       </div>
       <p>このプロジェクトに該当するSDGｓ項目を選んでください ※複数選択可</p>
@@ -49,18 +61,22 @@
 
       <div class="form-box">
       <form action="ogp_check.php" method="post" class="row">
+        <!-- テスト用 -->
+        <input type="hidden" name="img" value="test">
+        <input type="hidden" name="clients_id" value="<?$clients_id ?>">
+         <!--  -->
         <label for="GET-name">プロジェクト概要</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="project_overview" />
 
                 <label for="GET-name">詳細</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="detail" />
 
                 <label for="GET-name">制作期間</label><br>
-        <input class="form-style" id="GET-name" type="text" name="name" />
+        <input class="form-style" id="GET-name" type="text" name="production_period" />
 
                 <label for="GET-name">
-                  <input class="form" id="GET-name" type="radio" name="remote" value="リモート可"/> リモート可　
-                  <input class="form" id="GET-name" type="radio" name="remote" value="リモート不可"/> 不可</label><br>
+                  <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート可"/> リモート可　
+                  <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート不可"/> 不可</label><br>
           <br>
 
           <div class="center">

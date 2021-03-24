@@ -4,6 +4,9 @@ session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 include('functions.php');
 
+// var_dump($_SESSION);
+// exit;
+
 $clients_id= $_SESSION["id"];
 $name = $_SESSION["staff"];
 
@@ -23,7 +26,7 @@ $sql1 = "SELECT * ,COUNT(clients_id=$clients_id) AS project_counts FROM ogp_tabl
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 $stmt1 = $pdo->prepare($sql1);
-$status = $stmt1->execute();
+$status1 = $stmt1->execute();
 
 // データ登録処理後
 if ($status == false) {
@@ -32,13 +35,23 @@ if ($status == false) {
   exit();
 } else {
   $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);  
-  $posts1 = $stmt1->fetch(PDO::FETCH_ASSOC);
-  $project_counts = $posts1["project_counts"];
-//   var_dump($posts);
-//   exit;
+  
+  // var_dump($project_counts);
+  // exit;
 //   var_dump($posts);
 //   exit;
 }
+
+
+if ($status1 == false) {
+  $error = $stmt->errorInfo();
+  echo json_encode(["error_msg" => "{$error[2]}"]);
+  exit();
+} else {
+  $posts1 = $stmt1->fetch(PDO::FETCH_ASSOC);
+  $project_counts = $posts1["project_counts"];
+}
+
 
 
 
@@ -56,6 +69,11 @@ if ($status == false) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:site" content="https://royal-goto-8707.lolipop.io/">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" >
+    <meta name="twitter:title" content="デザインアップ！エスディージーズ" >
+    <meta name="twitter:description" content="SDGsの取り組みをSNSから広く告知！プロジェクトを担当するデザイナーをSNSで拡散募集できるSDGsプロジェクト広報支援サービス" >
     <title>DESIGN UP! SDGs</title>
 
     <!-- リセットCSS -->
@@ -84,7 +102,15 @@ if ($status == false) {
 
 <a href="ogp_creation.php">
   <div class="ogp-ichiran-img">
-    <img class="ogp-img" src="img/ogp-mini.png" alt="">
+    <img class="ogp-img" src="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" alt="">
+  </div>
+  <!-- <hr color="#C4C4C4" width="100%" size="1"> -->
+  <br>
+</a>
+
+<a href="ogp_creation.php">
+  <div class="ogp-ichiran-img">
+    <img class="ogp-img" src="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" alt="">
   </div>
   <!-- <hr color="#C4C4C4" width="100%" size="1"> -->
   <br>
