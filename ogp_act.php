@@ -75,7 +75,7 @@ if ($status == false) {
   // var_dump($id);
   // exit;
 
-  header("Location:ogp_check.php?id=$id");
+  header("Location:ogp_check.php?id=<?$id?>");
   exit();
 }
 
