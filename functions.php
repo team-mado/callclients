@@ -1,7 +1,7 @@
 <?php
 
-function connect_to_db()
-{
+// function connect_to_db()
+// {
 
 //   $dbn = 'mysql:dbname=graduation_production;charset=utf8;port=3306;host=localhost';
 //   $user = 'root';
