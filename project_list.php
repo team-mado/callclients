@@ -53,12 +53,6 @@ if ($status1 == false) {
 }
 
 
-
-
-
-
-
-
 ?>
 
 
@@ -100,21 +94,35 @@ if ($status1 == false) {
 <p><span><?= $name ?></span>  様ありがとうございます。<br>
 現在進行中のプロジェクトは<span class="project-kensu"><?= $project_counts ?></span> 件です。</p>
 
-<a href="ogp_creation.php">
-  <div class="ogp-ichiran-img">
-    <img class="ogp-img" src="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" alt="">
-  </div>
-  <!-- <hr color="#C4C4C4" width="100%" size="1"> -->
-  <br>
-</a>
+<?php foreach ($posts as $post) : ?>
 
-<a href="ogp_creation.php">
+
+<?php
+$img = $post["img"];
+$id = $post["id"];
+?>
+
+<div class="ogp-ichiran-img">
+<a href="ogp_update.php?id=<?= $id ?>"><img class="ogp-img" src="<?= $img ?>" alt=""></a>
+</div>
+
+<?php endforeach; ?>
+
+<!-- <a href="ogp_creation.php">
   <div class="ogp-ichiran-img">
     <img class="ogp-img" src="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" alt="">
-  </div>
+  </div> -->
   <!-- <hr color="#C4C4C4" width="100%" size="1"> -->
-  <br>
-</a>
+  <!-- <br>
+</a> -->
+
+<!-- <a href="ogp_creation.php">
+  <div class="ogp-ichiran-img">
+    <img class="ogp-img" src="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:S`G,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" alt="">
+  </div> -->
+  <!-- <hr color="#C4C4C4" width="100%" size="1"> -->
+  <!-- <br>
+</a> -->
 
   <br>
 <div class="button-box">

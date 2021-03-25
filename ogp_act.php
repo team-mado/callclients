@@ -3,8 +3,8 @@ session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 include('functions.php');
 
-// var_dump($_POST);
-// exit;
+
+
 
 $clients_id = $_SESSION["id"];
 $img = $_POST["img"];
@@ -16,6 +16,7 @@ $remote_availability = $_POST["remote_availability"];
 
 
 // var_dump($clients_id);
+// var_dump($img);
 // var_dump($project_overview);
 // var_dump($detail);
 // var_dump($production_period);
@@ -36,7 +37,7 @@ $stmt->bindValue(':clients_id', $clients_id, PDO::PARAM_INT);
 $stmt->bindValue(':img', $img, PDO::PARAM_STR);
 $stmt->bindValue(':project_overview', $project_overview, PDO::PARAM_STR);
 $stmt->bindValue(':detail', $detail, PDO::PARAM_STR);
-$stmt->bindValue(':production_period', $production_period, PDO::PARAM_INT);
+$stmt->bindValue(':production_period', $production_period, PDO::PARAM_STR);
 $stmt->bindValue(':remote_availability', $remote_availability, PDO::PARAM_INT);
 $status = $stmt->execute();
 
@@ -45,10 +46,38 @@ if ($status == false) {
   echo json_encode(["error_msg" => "{$error[2]}"]);
   exit();
 } else {
-  header("Location:project_list.php");
-  exit();
+  // header("Location:ogp_check.php");
+  // exit();
 }
 
+
+// 入れたばかりのデータを持ってくる
+$pdo = connect_to_db();
+// $sql = "SELECT * FROM ogp_table where id ";
+$sql = "SELECT * FROM ogp_table WHERE id = (SELECT MAX(id) FROM ogp_table); ";
+$stmt = $pdo->prepare($sql);
+// $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+$status = $stmt->execute();
+
+if ($status == false) {
+  $error = $stmt->errorInfo();
+  echo json_encode(["error_msg" => "{$error[2]}"]);
+  exit();
+} else {
+  $posts = $stmt->fetch(PDO::FETCH_ASSOC);
+  $id = $posts["id"];
+  $clients_id = $posts["clients_id"];
+  $img = $posts["img"];
+  $project_overview = $posts["project_overview"];
+  $detail = $posts["detail"];
+  $production_period = $posts["production_period"];
+  $remote_availability = $posts["remote_availability"];
+  // var_dump($id);
+  // exit;
+
+  header("Location:ogp_check.php?id=$id");
+  exit();
+}
 
 
 

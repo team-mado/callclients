@@ -1,63 +1,57 @@
 <?php
 session_start();
-error_reporting(E_ALL & ~E_NOTICE);
-include('functions.php');
+include("functions.php");
+check_session_id();
 
-// $clients_id = $_SESSION["id"];
+// 送信データ受け取り
+$id = $_GET["id"];
+$clients_id = $_SESSION["id"];
+$img = $_POST["img"];
+$project_overview = $_POST["project_overview"];
+$detail = $_POST["detail"];
+$production_period = $_POST["production_period"];
+$remote_availability = $_POST["remote_availability"];
 
-// var_dump($_GET["id"]);
+
+// var_dump($_GET);
+// var_dump($_SESSION);
+// var_dump($_POST);
 // exit;
 
-// 初期画面/
-if(!isset($_GET["id"])){
-  $img = "https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:　,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png";
-}
-
-
-
-// OGP編集時にID取得
-if(isset($_GET["id"])){
-  $id = $_GET["id"];
-}
-
-// すでにOGPを作成しているときはデータが入っている状態
-if(isset($_GET["id"])){
-
+// DB接続
 $pdo = connect_to_db();
-$sql = "SELECT * FROM ogp_table where id = :id";
-// var_dump($sql);
-// exit;
+
+// UPDATE文を作成&実行
+$sql = "UPDATE ogp_table SET clients_id=:clients_id, img=:img, project_overview=:project_overview, detail=:detail,production_period=:production_period, remote_availability=:remote_availability WHERE id=:id";
+
 $stmt = $pdo->prepare($sql);
+$stmt->bindValue(':clients_id', $clients_id, PDO::PARAM_INT);
+$stmt->bindValue(':img', $img, PDO::PARAM_STR);
+$stmt->bindValue(':project_overview', $project_overview, PDO::PARAM_STR);
+$stmt->bindValue(':detail', $detail, PDO::PARAM_STR);
+$stmt->bindValue(':production_period', $production_period, PDO::PARAM_STR);
+$stmt->bindValue(':remote_availability', $remote_availability, PDO::PARAM_INT);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
-
+// データ登録処理後
 if ($status == false) {
+  // SQL実行に失敗した場合はここでエラーを出力し，以降の処理を中止する
   $error = $stmt->errorInfo();
   echo json_encode(["error_msg" => "{$error[2]}"]);
   exit();
 } else {
-  $post = $stmt->fetch(PDO::FETCH_ASSOC);
-  $id = $post["id"];
-  $img = $post["img"];
-  $clients_id= $post["clients_id"];
-  $project_overview = $post["project_overview"];
-  $detail = $post["detail"];
-  $production_period = $post["production_period"];
-  $premote_availability = $post["premote_availability"];
-
+  // 正常にSQLが実行された場合は一覧ページファイルに移動し，一覧ページの処理を実行する
+  header("Location:ogp_check.php?id=$id");
+  exit();
 }
-
-}
-
-
-
-
-
-
 
 
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -108,10 +102,9 @@ if ($status == false) {
       <br />
 
       <div class="form-box">
-      <form action="ogp_act.php" method="post" class="row">
+      <form action="ogp_check.php" method="post" class="row">
         <!-- テスト用 -->
 
-        <input type="hidden" name="id" value="<? echo($id) ?>">
         <input type="hidden" name="img" value="<? echo($img) ?>">
          <!--  -->
         <label for="GET-name">プロジェクト概要</label><br>
@@ -126,8 +119,9 @@ if ($status == false) {
                   <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート不可"/> 不可</label><br>
           <br>
           <div class="center">
-      <a href="ogp_act.php"><button class="simple_square_btn1">
-        <input type="submit" value="" />送信する</a></input>
+            <a href="ogp_delite.php?id=<?= $id ?>">削除する</a>
+      <a href="ogp_check.php"><button class="simple_square_btn1">
+        <input type="submit" value="" />更新する</a></input>
       </button>
       </div>
       <br>

@@ -45,19 +45,14 @@ if ($status == false) {
   $detail = $post["detail"];
   $production_period = $post["production_period"];
   $premote_availability = $post["premote_availability"];
-
+  }
 }
-
-}
-
-
-
-
-
-
-
 
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -108,10 +103,9 @@ if ($status == false) {
       <br />
 
       <div class="form-box">
-      <form action="ogp_act.php" method="post" class="row">
+      <form action="ogp_update_act.php?id=<? echo($id) ?>" method="post" class="row">
         <!-- テスト用 -->
 
-        <input type="hidden" name="id" value="<? echo($id) ?>">
         <input type="hidden" name="img" value="<? echo($img) ?>">
          <!--  -->
         <label for="GET-name">プロジェクト概要</label><br>
@@ -126,8 +120,9 @@ if ($status == false) {
                   <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート不可"/> 不可</label><br>
           <br>
           <div class="center">
-      <a href="ogp_act.php"><button class="simple_square_btn1">
-        <input type="submit" value="" />送信する</a></input>
+            <a href="ogp_delite.php?id=<?= $id ?>">削除する</a>
+      <a href="ogp_update_act.php?id=<? echo($id) ?>"><button class="simple_square_btn1">
+        <input type="submit" value="" />更新する</a></input>
       </button>
       </div>
       <br>
