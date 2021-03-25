@@ -28,7 +28,7 @@ function connect_to_db()
     echo json_encode(["db error" => "{$e->getMessage()}"]);
     exit();
   }
-}
+// }
 
 
 
