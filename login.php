@@ -31,7 +31,7 @@ if (!empty($_POST)) {
             $_SESSION["id"] = $val["id"];
             $_SESSION["staff"] = $val["staff"];
             $_SESSION["email"] = $val["email"];
-            header('Location:project_list.php');
+            header('Location:project_list2.php');
         }
     }
 }

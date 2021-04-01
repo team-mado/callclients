@@ -60,7 +60,6 @@
                       <label for="GET-name">
                         <input class="form" id="GET-name" type="radio" name="remote" value="リモート可"/>リモート可　
                         <input class="form" id="GET-name" type="radio" name="remote" value="リモート不可"/>不可</label><br>
-
           <br>
 
           <div class="center">

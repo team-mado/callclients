@@ -49,6 +49,6 @@ if ($status == false) {
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
 } else {
-    header("Location:ogp_creation.php");
+    header("Location:registration_thanks.php");
     exit();
 }

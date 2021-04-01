@@ -47,6 +47,12 @@ if ($status == false) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:site" content="https://square-takachiho-6372.lolipop.io/">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:<?= $image_text ?>,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" >
+    <!-- <meta name="twitter:image" content="https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:こんにちはこんにちは,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png" > -->
+    <meta name="twitter:title" content="デザイナー募集" >
+    <meta name="twitter:description" content="SDGsの取り組みをSNSから広く告知！プロジェクトを担当するデザイナーをSNSで拡散募集できるSDGsプロジェクト広報支援サービス" >
     <title>DESIGN UP! SDGs</title>
 
     <!-- リセットCSS -->

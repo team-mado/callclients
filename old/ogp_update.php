@@ -116,7 +116,7 @@ if ($status == false) {
                 <label for="GET-name">制作期間</label><br>
         <input class="form-style" id="GET-name" type="text" name="production_period" value="<? echo($production_period) ?>" />
                 <label for="GET-name">
-                  <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート可"/> リモート可　
+                  <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート可" checked="checked"/> リモート可　
                   <input class="form" id="GET-name" type="radio" name="remote_availability" value="リモート不可"/> 不可</label><br>
           <br>
           <div class="center">

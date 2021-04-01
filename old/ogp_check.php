@@ -105,7 +105,9 @@ if ($status == false) {
   <br>
 <div class="button-box">
 <a href="ogp_update.php?id=<? echo($id) ?>"><img src="img/bt-hensyu.png" alt=""><input type="submit" value="" /></a>
+<a href="project_recruiting.php?id=<? echo($id) ?>">test</a>
 <a href="https://twitter.com/intent/tweet?text=グラフィックデザイナー募集中?url=https://royal-goto-8707.lolipop.io/project_recruiting.php?id=<? echo($id) ?>"><img src="img/bt-tweet.png" alt=""></a>
+
 
 <br>
     <div class="center">

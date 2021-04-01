@@ -26,49 +26,49 @@
 
       <form action="registration_add.php" method="post" class="row">
         <label for="company">社名</label><br>
-        <input class="form-style" id="GET-name" type="text" name="company_name" />
+        <input class="form-style" id="GET-name" type="text" name="company_name"  value="test"/>
       
       <br />
       
         <label for="GET-name">E-mail</label><br>
-        <input class="form-style" id="GET-name" type="text" name="email" />
+        <input class="form-style" id="GET-name" type="text" name="email" value="" />
       
       <br />
 
             
         <label for="GET-name">パスワード</label><br>
-        <input class="form-style" id="GET-name" type="text" name="password" />
+        <input class="form-style" id="GET-name" type="text" name="password" value=""/>
       
       <br />
 
             
         <label for="GET-name">担当名</label><br>
-        <input class="form-style" id="GET-name" type="text" name="staff" />
+        <input class="form-style" id="GET-name" type="text" name="staff" value="たかどなおあき"/>
       
       <br />
       
         <label for="GET-name">所在地</label><br>
-        <input class="form-style" id="GET-name" type="text" name="location" />
+        <input class="form-style" id="GET-name" type="text" name="location" value="テスト" />
       
       <br />
       
         <label for="GET-name">事業内容</label><br>
-        <input class="form-style" id="GET-name" type="text" name="businesscontent" />
+        <input class="form-style" id="GET-name" type="text" name="businesscontent" value="テスト"/>
       
       <br />
       
         <label for="GET-name">分野</label><br>
-        <input class="form-style" id="GET-name" type="text" name="field" />
+        <input class="form-style" id="GET-name" type="text" name="field" value="テスト" />
       
       <br />
       
         <label for="GET-name">資本金</label><br>
-        <input class="form-style" id="GET-name" type="text" name="capital" />
+        <input class="form-style" id="GET-name" type="text" name="capital" value="テスト" />
       
       <br />
       
         <label for="GET-name">社員数</label><br>
-        <input class="form-style" id="GET-name" type="text" name="number_of_employees" />
+        <input class="form-style" id="GET-name" type="text" name="number_of_employees" value="テスト" />
   </div>    
       <br>
       <div class="center">

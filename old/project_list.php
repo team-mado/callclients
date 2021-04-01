@@ -129,7 +129,7 @@ $id = $post["id"];
 <!-- <a href="ogp-edit.php"><img src="img/bt-hensyu.png" alt=""></a><input type="submit" value="" /><a href="ogp-edit.php"></a>
 <a href="tweet.php"><img src="img/bt-tweet.png" alt=""></a><input type="submit" value="" /><a href="tweet.php"></a></input> -->
 
-<a href="ogp_creation.php">新規作成</a>
+<a href="ogp_creation2.php">新規作成</a>
 <a href="logout.php">ログアウト</a>
 <br>
 

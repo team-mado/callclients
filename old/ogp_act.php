@@ -7,14 +7,35 @@ include('functions.php');
 
 
 $clients_id = $_SESSION["id"];
-$img = $_POST["img"];
+
+
 $project_overview = $_POST["project_overview"];
 $detail = $_POST["detail"];
 $production_period = $_POST["production_period"];
 $remote_availability = $_POST["remote_availability"];
+$img = "https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png";
+// $img = "https://res.cloudinary.com/dlqadjcsc/image/upload/v1616468990/sample.jpg";
+$v1 = 'https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:';
+$img_in1 = $project_overview;
+$img_in2 = $detail;
+$img_in3 = $production_period;
+$v3 = ',co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png';
+$img = $v1.$img_in1."%0A%0A".$img_in2."%0A%0A".$img_in3."%0A".$v3;
 
 
 
+// $project_overview = $_POST["project_overview"];
+// // $img = "https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:,co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png";
+// $v1 = 'https://res.cloudinary.com/dlqadjcsc/image/upload/l_text:Sawarabi%20Gothic_30_bold:';
+// $img_in = $project_overview;
+// $v3 = ',co_rgb:333,w_500,c_fit/v1616471824/UbpRDEkE_uqbs0d.png';
+// $img = $v1.$img_in.$v3;
+// $detail = $_POST["detail"];
+// $production_period = $_POST["production_period"];
+// $remote_availability = $_POST["remote_availability"];
+
+
+// var_dump($_SESSION["id"]);
 // var_dump($clients_id);
 // var_dump($img);
 // var_dump($project_overview);
@@ -38,7 +59,7 @@ $stmt->bindValue(':img', $img, PDO::PARAM_STR);
 $stmt->bindValue(':project_overview', $project_overview, PDO::PARAM_STR);
 $stmt->bindValue(':detail', $detail, PDO::PARAM_STR);
 $stmt->bindValue(':production_period', $production_period, PDO::PARAM_STR);
-$stmt->bindValue(':remote_availability', $remote_availability, PDO::PARAM_INT);
+$stmt->bindValue(':remote_availability', $remote_availability, PDO::PARAM_STR);
 $status = $stmt->execute();
 
 if ($status == false) {
@@ -75,7 +96,7 @@ if ($status == false) {
   // var_dump($id);
   // exit;
 
-  header("Location:ogp_check.php?id=echo($id)");
+  header("Location:ogp_check.php?id=$id");
   exit();
 }
 
